@@ -9,6 +9,7 @@ from tradecheck import from_d, to_d, dayname_t
 #take_profit = 100
 #save_deal = 10
 pair = 'EUR/USD'
+api_key = ''
 
 check_date_to_trade()
 
@@ -24,7 +25,7 @@ response = requests.get(url, headers={'Accept':'application/json'}, params ={
 		'period' :'1d',
 		'from' :f'{from_d}T00:00',
 		'to' :f'{to_d}T12:00',
-		'access_key' :'HmdW9Gmw4N9QL9aun6c90TqO6I7GVsSv7yBG46UfxMa9L5UzXJ'
+		'access_key' : api_key
 	})
 
 cur_price = response.json()
